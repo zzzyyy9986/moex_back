@@ -50,8 +50,10 @@ export class StocksController {
         let  resp = []
         const util = require('util');
         const exec = util.promisify(require('child_process').exec);
+        const tickers = req.body.tickers
 
-        for (const ticker of Object.keys(tickersKeyWords)) {
+
+        for (const ticker of tickers) {
             console.log('Иду по тикеру ' + ticker)
             const { stdout, stderr } = await exec(StocksCommandService.getRateByKeyWord(ticker,tickersKeyWords[ticker]));
             console.log('stout:'+stdout)
