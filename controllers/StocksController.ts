@@ -52,7 +52,9 @@ export class StocksController {
         const exec = util.promisify(require('child_process').exec);
 
         for (const ticker of Object.keys(tickersKeyWords)) {
+            console.log('Иду по тикеру ' + ticker)
             const { stdout, stderr } = await exec(StocksCommandService.getRateByKeyWord(ticker,tickersKeyWords[ticker]));
+            console.log('stout:'+stdout)
              resp.push({
                  ticker,
                  value:stdout
