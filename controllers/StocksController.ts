@@ -36,7 +36,7 @@ export class StocksController {
                     id: item.id,
                     title: item.title,
                     url: item.url,
-                    value: +stdout.replace("\n","") * 10,
+                    value: +(stdout.replace("\n","") * 10),
                     source:item.url.split("/")[0],
                     time:item.timestamp,
                     ticker,

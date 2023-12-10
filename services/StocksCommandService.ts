@@ -19,7 +19,7 @@ export class StocksCommandService {
             return  "echo " + randomIntFromInterval(0,100)/100 * -1 * randomIntFromInterval(0,1)
         }
         else {
-            return `python /root/proton/sent_title.py --title "${title}" --period "month"`;
+            return `python /root/proton/sent_title.py --title "${title}"`;
         }
     }
     public static getRateByArticle() {
