@@ -19,11 +19,17 @@ app.get('/', function (req, res) {
     res.sendFile(pathToFront + "index.html");
     res.send('Express + TypeScript Server');
 });
-app.get('/getNewsByTicker', function (req, res) {
-    StocksController_1.StocksController.getNewsByTicker(req, res);
-});
+// app.get('/getNewsByTicker', (req: express.Request, res: express.Response) => {
+//     StocksController.getNewsByTicker(req, res)
+// });
 app.post('/getNewsByTicker', function (req, res) {
     StocksController_1.StocksController.getNewsByTicker(req, res);
+});
+app.get('/getStocksList', function (req, res) {
+    StocksController_1.StocksController.getStocksList(req, res);
+});
+app.post('/getStocksList', function (req, res) {
+    StocksController_1.StocksController.getStocksList(req, res);
 });
 app.post('/getStocksList', function (req, res) {
     StocksController_1.StocksController.getStocksList(req, res);

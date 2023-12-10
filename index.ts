@@ -23,13 +23,19 @@ app.get('/', (req: express.Request, res: express.Response) => {
     res.sendFile(pathToFront + "index.html");
     res.send('Express + TypeScript Server');
 });
-app.get('/getNewsByTicker', (req: express.Request, res: express.Response) => {
-    StocksController.getNewsByTicker(req, res)
-});
+// app.get('/getNewsByTicker', (req: express.Request, res: express.Response) => {
+//     StocksController.getNewsByTicker(req, res)
+// });
 app.post('/getNewsByTicker', (req: express.Request, res: express.Response) => {
     StocksController.getNewsByTicker(req, res)
 });
 
+app.get('/getStocksList', (req: express.Request, res: express.Response) => {
+    StocksController.getStocksList(req, res)
+});
+app.post('/getStocksList', (req: express.Request, res: express.Response) => {
+    StocksController.getStocksList(req, res)
+});
 app.post('/getStocksList', (req: express.Request, res: express.Response) => {
     StocksController.getStocksList(req, res)
 });
