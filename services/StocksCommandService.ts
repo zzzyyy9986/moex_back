@@ -7,7 +7,7 @@ export class StocksCommandService {
     public static getRateByKeyWord(ticker:string,keyWord:string){
         const util = require('util');
         const exec = util.promisify(require('child_process').exec);
-        if(mode === Mods.DEV){
+        if(mode == Mods.DEV){
             return  "echo " + randomIntFromInterval(0,100)/100 * -1 * randomIntFromInterval(0,1)
         }
         else {
@@ -15,7 +15,7 @@ export class StocksCommandService {
         }
     }
     public static getRateByTitle(title:string){
-        if(mode === Mods.DEV){
+        if(mode == Mods.DEV){
             return  "echo " + randomIntFromInterval(0,100)/100 * -1 * randomIntFromInterval(0,1)
         }
         else {
