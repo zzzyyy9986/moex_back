@@ -11,7 +11,7 @@ export class StocksCommandService {
             return  "echo " + randomIntFromInterval(0,100)/100 * -1 * randomIntFromInterval(0,1)
         }
         else {
-            return '/usr/bin/python /root/proton/sentiment.py  --ticker "'+ticker+'" --search_query "'+keyWord+'"';
+            return 'python /root/proton/sentiment.py  --ticker "'+ticker+'" --search_query "'+keyWord+'"';
         }
     }
     public static getRateByTitle(title:string){
@@ -19,7 +19,7 @@ export class StocksCommandService {
             return  "echo " + randomIntFromInterval(0,100)/100 * -1 * randomIntFromInterval(0,1)
         }
         else {
-            return `/usr/bin/python /root/proton/sent_title.py --title "${title}"`;
+            return `python /root/proton/sent_title.py --title "${title}"`;
         }
     }
     public static getRateByArticle() {
