@@ -11,7 +11,7 @@ export class StocksCommandService {
             return  "echo " + randomIntFromInterval(0,100)/100 * -1 * randomIntFromInterval(0,1)
         }
         else {
-            return 'python /root/proton/sentiment.py  --ticker "'+ticker+'" --search_query "'+keyWord+'" --period "month"';
+            return 'python /root/proton/sentiment.py  --ticker "'+ticker+'" --search_query "'+keyWord+'" --period "week"';
         }
     }
     public static getRateByTitle(title:string){
