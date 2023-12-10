@@ -27,7 +27,7 @@ app.get('/', (req: express.Request, res: express.Response) => {
 //     StocksController.getNewsByTicker(req, res)
 // });
 app.post('/getNewsByTicker', (req: express.Request, res: express.Response) => {
-    StocksController.getNewsByTicker(req, res)
+    return StocksController.getNewsByTicker(req, res)
 });
 
 app.get('/getStocksList', (req: express.Request, res: express.Response) => {

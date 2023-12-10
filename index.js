@@ -23,7 +23,7 @@ app.get('/', function (req, res) {
 //     StocksController.getNewsByTicker(req, res)
 // });
 app.post('/getNewsByTicker', function (req, res) {
-    StocksController_1.StocksController.getNewsByTicker(req, res);
+    return StocksController_1.StocksController.getNewsByTicker(req, res);
 });
 app.get('/getStocksList', function (req, res) {
     StocksController_1.StocksController.getStocksList(req, res);

@@ -17,6 +17,7 @@ import {forEach} from "lodash";
 export class StocksController {
     // газпром|сбер|альфа|нефть
     public static async getNewsByTicker(req: express.Request, res: express.Response){
+        console.log('тууууууут')
         const util = require('util');
         const exec = util.promisify(require('child_process').exec);
         let resp = []
